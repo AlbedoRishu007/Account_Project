@@ -59,7 +59,7 @@ class BankAccount{
 
 }
  
-class BankTest{
+class AccountTest{
     public static void main(String[] args){
     Scanner in = new Scanner(System.in);
 
