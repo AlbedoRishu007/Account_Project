@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.File;
+import java.io. IOException;
 class BankAccount{
  
   private double balance;
@@ -67,5 +69,17 @@ class BankTest{
 
     System.out.println("BankAccount " + account.getNumber());
     System.out.println("Has a balance of " + account.getBalance());
+  try{
+     File file = new File("C:\\Users\\cdac\\Desktop\\Bank_Project\\Bank.txt");
+     if(file.createNewFile())
+     System.out.println("Success!");
+     else
+     System.out.println("Error! File already Exists");
+  }catch(IOException e){
+    e.printStackTrace();
+  }
+
+
+
 }
 }
