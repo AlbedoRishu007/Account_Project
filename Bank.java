@@ -1,6 +1,6 @@
 import java.util.Scanner;
-import java.io.File;
-import java.io. IOException;
+import java.io.*;
+
 class BankAccount{
  
   private double balance;
@@ -66,6 +66,7 @@ class BankTest{
     BankAccount account = new BankAccount(1000);
     account.deposit(500);
     account.withdraw(50);
+    
 
     System.out.println("BankAccount " + account.getNumber());
     System.out.println("Has a balance of " + account.getBalance());
@@ -78,6 +79,15 @@ class BankTest{
   }catch(IOException e){
     e.printStackTrace();
   }
+
+  try{
+     BufferedWriter out = new BufferedWriter(new FileWriter("Bank.txt",true));
+     out.write(String.valueOf(account.getNumber()));
+     
+     out.close();
+     System.out.println("File Created successfully");
+  }
+  catch(IOException e){}
 
 
 
