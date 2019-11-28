@@ -5,7 +5,7 @@ class BankAccount{
  
   private double balance;
   private int accountNumber;
-  private static int lastAccountNumber = 0;
+  private static int lastAccountNumber = 100;
 
 
   public BankAccount(double intialBalance)
